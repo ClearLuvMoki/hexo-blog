@@ -1,7 +1,7 @@
 ---
 title: '基本视觉格式化（一）'
 date: 2020-04-01 16:20
-updated: 2020-04-01 016:20
+updated: 2020-04-01 16:20
 index_img: ./blog-img/css.jpg
 categories: CSS
 tags: CSS
@@ -13,7 +13,7 @@ tags: CSS
 
 ![](https://moki-blog.oss-cn-chengdu.aliyuncs.com/blogImg/boxImg.png)
 
-##### 块级元素
+#### 块级元素
 
 ![](https://moki-blog.oss-cn-chengdu.aliyuncs.com/blogImg/blockImg.png)
 
@@ -102,3 +102,68 @@ p { width: 100px; margin: 0 200px; border-left: 10px; border-right: 10px; }
 ##### 替换元素
 
 <p>替换元素中的规则，与非替换的块级元素基本规则一样，除去一点：替换元素如果设置<strong>width为auto，那么width则是该替换元素的默认宽度</strong>；并且设置了宽度，如果不设置height那么则会成比例的放大或者缩小，相反设置height也是一样的道理。</p>
+
+<hr/>
+
+##### 垂直格式化
+
+<p>一个段落的默认高度与其内容决定，高度也会收到相应的宽度影响，一个段落越窄，那么就回越高。</p>
+
+<p>当我们设置的高度小于所需的高度时候，可能会溢出，表面看起来增高了。</p>
+
+<p>height与width一样，同样是内容区的高度，也同样还有margin，border和padding</p>
+
+##### 垂直属性
+
+>垂直属性
+>
+>​	margin-top, margin-bottom;
+>
+>​	padding-top, padding-bottom;
+>
+>​	border-top, border-bottom;
+>
+>​	height;
+>
+>这些值相加往往是块级元素父级的height，
+>
+>与width一样，只有三个值可以设置成auto，margin-top, margin-bottom和height；
+>
+>但是与width不同的是，在正常流的布局中，如果将margin-top, margin-bottom设置成auto，那么将会重置为0，
+>
+>所以不能使用这个上下居中
+
+##### 百分数高度
+
+<p>在我们之前说的中，如果将<strong>margin-top, margin-bottom设置成auto，那么将重置为0，无法像width那样居中。</strong></p>
+
+<p>所以我们可以使用百分数的高度来居中元素。</p>
+
+##### auto高度
+
+>1. 如果正常流元素中，设置高度为auto，那么其会出现一个border，没有paddding，刚好包裹其内容；
+
+##### 合并垂直外边距
+
+<p>垂直格式化中重要的一点就是会垂直合并邻边的外边距，合并行为之存在外边距，如果元素存在内边距和边框，那么不会合并。</p>
+
+```html
+<ul>
+  <li style="margin-top: 10px;margin-bottom: 20px;">list1</li>
+  <li style="margin-top: 10px;margin-bottom: 20px;">list2</li>
+  <li style="margin-top: 10px;margin-bottom: 20px;">list3</li>
+  <li style="margin-top: 10px;margin-bottom: 20px;">list4</li>
+</ul>
+```
+
+![](https://moki-blog.oss-cn-chengdu.aliyuncs.com/blogImg/mergeMarigin.png)
+
+<p>可以看见我们设置的margin-bottom会合并较小的margin一边，两个li之间的距离不是10+20，而是最大值20.</p>
+
+##### 负外边距
+
+<p>如果垂直的外边距都设置成负数合并，那么则会取两个外边距绝对值的最大值；如果一个正数的外边距和一个负数的外边距合并，会从正数的外边距减去负外边距的绝对值</p>
+
+##### 列表项
+
+<p>对于上述的ul这种标签出现的前面的小圆点，可以使用<code>list-style-position</code>等方案解决位置</p>
