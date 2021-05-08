@@ -56,3 +56,13 @@ tags: CSS
 
 <p>虽然块级元素设置line-height不会直接其作用，但是给块级元素设置line-height会对其文本内容或者其行内元素会继承line-height。</p>
 
+##### 行内非替换元素
+
+<p>对于非替换元素，<code>font-size</code>就直接决定了内容框的大小-字体的大小，或者说是em框的大小。</p>
+
+<p>接下来就是<code>line-height</code>，如果设置了line-height， 那么line-height与font-size的差除以2，分到内容区的上下，就得到了行内框。</p>
+
+![](https://moki-blog.oss-cn-chengdu.aliyuncs.com/blogImg/inlineBox.png)
+
+>🌄： 这里的行内元素与涉及到<a href="http://www.clearluv.com/2020/03/30/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/#%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90">垂直对齐</a>等内容，在最后做详细的笔记。
+
