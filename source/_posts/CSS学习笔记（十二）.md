@@ -57,7 +57,10 @@ p { text-align: justify; }
 
 <p>⚠️：<strong>text-align: justify;</strong>拉伸行内间隙是由用户代理决定的， 而不是CSS决定；有一些用户代理会拉伸<strong>单词内字母</strong>间距，但是一些用户代理只会拉伸<strong>单词</strong>之间的间距；还有一些用户代理会缩短单词之间间隙让元素更加紧凑。</p>
 
-<hr/>
+<ul>
+  width
+  <li></li>
+</ul>
 
 ##### 垂直对齐
 
