@@ -61,3 +61,11 @@ switch(expression){
 >- 当遇到 **break** 语句时，switch 终止，控制流将跳转到 switch 语句后的下一行。
 >- 不是每一个 case 都需要包含 **break**。如果 case 语句不包含 **break**，控制流将会 *继续* 后续的 case，直到遇到 break 为止。
 >- 一个 **switch** 语句可以有一个可选的 **default** case，出现在 switch 的结尾。default case 可用于在上面所有 case 都不为真时执行一个任务。default case 中的 **break** 语句不是必需的。
+
+##### 三目运算符
+
+```c
+// 如果表达式一是真，那么则执行表达式二， 否则执行表达式三
+Exp1 ? Exp2 : Exp3;
+```
+
